@@ -3,8 +3,8 @@ import axios from 'axios';
 
 
 const instance = new axios.create({
-    // baseURL: process.env.REACT_APP_API_URL
-    baseURL: 'http://localhost:5271'
+    baseURL: process.env.REACT_APP_API_URL
+    // baseURL: 'http://localhost:5271'
 })
 
 axios.interceptors.request.use(
@@ -38,6 +38,8 @@ axios.interceptors.response.use(
 export default {
 
     getTasks: async () => {
+        console.log(process.env.REACT_APP_API_URL);
+        
         const result = await instance.get()
         console.log(result);
 
