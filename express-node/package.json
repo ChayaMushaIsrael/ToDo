@@ -1,0 +1,17 @@
+{
+  "name": "express-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@api/render-api": "file:.api/apis/render-api",
+    "axios": "^1.8.3",
+    "express": "^4.21.2"
+  }
+}
