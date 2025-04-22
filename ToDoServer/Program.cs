@@ -13,7 +13,7 @@ new MySqlServerVersion(new Version(8, 0, 21))));
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowSpecificOrigin",
-        builder => builder.WithOrigins("http://localhost:3000")
+        builder => builder.WithOrigins("https://todoclient-06f4.onrender.com/")
                           .AllowAnyHeader()
                           .AllowAnyMethod());
 });
