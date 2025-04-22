@@ -36,18 +36,18 @@ app.UseCors("AllowSpecificOrigin");
 
 
 //getAllItems
-app.MapGet("/", async (ToDoDbContext db) =>
+app.MapGet("", async (ToDoDbContext db) =>
 {
     return await db.Items.ToListAsync();
 });
 //getById
-app.MapGet("/{id}", async (ToDoDbContext db, int id) =>
-{
-    var item = await db.Items.FirstOrDefaultAsync(x => x.Id == id);
-    if (item != null)
-        return item;
-    return null;
-});
+// app.MapGet("/{id}", async (ToDoDbContext db, int id) =>
+// {
+//     var item = await db.Items.FirstOrDefaultAsync(x => x.Id == id);
+//     if (item != null)
+//         return item;
+//     return null;
+// });
 //addItem
 app.MapPost("/addItem", async (ToDoDbContext db, Item item) =>
 {
