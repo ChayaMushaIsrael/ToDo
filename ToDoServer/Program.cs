@@ -12,8 +12,12 @@ new MySqlServerVersion(new Version(8, 0, 21))));
 //cors
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowSpecificOrigin",
-        builder => builder.WithOrigins("https://todoclient-06f4.onrender.com/")
+    // options.AddPolicy("AllowSpecificOrigin",
+    //     builder => builder.WithOrigins("https://todoclient-06f4.onrender.com")
+    //                       .AllowAnyHeader()
+    //                       .AllowAnyMethod());
+     options.AddPolicy("AllowAllOrigins",
+        builder => builder.AllowAnyOrigin()
                           .AllowAnyHeader()
                           .AllowAnyMethod());
 });
